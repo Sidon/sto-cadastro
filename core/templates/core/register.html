@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <title>Cadastro de usuários com email</title>
+</head>
+<body>
+    <h1>Criando uma conta</h1>
+    <p>Digite os dados solicitados abaixo:</p>
+    <form action="." method="post">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Criar minha conta" </p>
+    </form>
+</body>
+</html>
